@@ -241,7 +241,7 @@ const App = () => {
             />
             <PriceCard
               title="Premium"
-              price="599,99"
+              price="649,99"
               features={[
                 "Gestão Total + Site Grátis",
                 "Site grátis no mínimo de 3 meses",
