@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Instagram,
   Smartphone,
@@ -14,7 +14,7 @@ import {
   Layout,
   Globe
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const Navbar = () => (
   <nav className="fixed top-0 w-full z-50 glass border-b border-white/5 bg-[#0a0a0c]/80 backdrop-blur-xl">
@@ -35,8 +35,8 @@ const Navbar = () => (
   </nav>
 );
 
-const PriceCard = ({ title, price, highlighted, features, color }) => (
-  <motion.div
+const PriceCard = ({ title, price, highlighted, features }) => (
+  <Motion.div
     whileHover={{ y: -10 }}
     className={`card-vibrant relative overflow-hidden flex flex-col h-full ${highlighted ? 'border-brand-primary/50 ring-2 ring-brand-primary/20' : ''}`}
   >
@@ -75,7 +75,7 @@ const PriceCard = ({ title, price, highlighted, features, color }) => (
     >
       Assinar Agora
     </a>
-  </motion.div>
+  </Motion.div>
 );
 
 const App = () => {
@@ -92,7 +92,7 @@ const App = () => {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -120,7 +120,7 @@ const App = () => {
                 <Star className="w-5 h-5" /> Análise de Perfil Grátis
               </button>
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
 
@@ -157,7 +157,7 @@ const App = () => {
                 desc: "Vídeos dinâmicos no estilo 'Viral', com legendas animadas, cortes precisos e trilhas que retêm o público."
               }
             ].map((service, i) => (
-              <motion.div
+              <Motion.div
                 key={i}
                 whileHover={{ scale: 1.02 }}
                 className="card-vibrant border-none bg-gradient-to-b from-white/[0.03] to-transparent"
@@ -167,7 +167,7 @@ const App = () => {
                 </div>
                 <h3 className="text-2xl font-black mb-4 uppercase tracking-tighter text-white">{service.title}</h3>
                 <p className="text-slate-400 leading-relaxed font-medium">{service.desc}</p>
-              </motion.div>
+              </Motion.div>
             ))}
           </div>
         </div>
@@ -187,7 +187,7 @@ const App = () => {
               { step: "03", title: "Design", desc: "Executamos artes e vídeos com foco em autoridade." },
               { step: "04", title: "Entrega", desc: "Lançamos seu novo posicionamento e monitoramos resultados." }
             ].map((item, i) => (
-              <motion.div
+              <Motion.div
                 key={i}
                 whileHover={{ scale: 1.05 }}
                 className="relative p-8 glass rounded-[2.5rem] border-brand-primary/20 bg-gradient-to-br from-white/[0.05] to-transparent group overflow-hidden shadow-2xl shadow-brand-primary/5"
@@ -199,7 +199,7 @@ const App = () => {
                 <h4 className="text-xl font-black text-white mb-4 uppercase tracking-tight">{item.title}</h4>
                 <p className="text-slate-400 text-sm font-medium leading-relaxed">{item.desc}</p>
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </motion.div>
+              </Motion.div>
             ))}
           </div>
         </div>
@@ -217,7 +217,7 @@ const App = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             <PriceCard
               title="Starter"
-              price="199,99"
+              price="249,99"
               features={[
                 "Perfil Profissional + Link na Bio",
                 "3 Artes de Feed por semana",
