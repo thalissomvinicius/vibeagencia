@@ -243,14 +243,28 @@ const App = () => {
               title="Premium"
               price="599,99"
               features={[
-                "Gestão Total + Criação de Site",
+                "Gestão Total + Site Grátis",
+                "Site grátis no mínimo de 3 meses",
                 "Postagens (Feed + Stories) Ilimitadas",
                 "4 Edições de Reels por mês",
                 "Identidade Visual Completa",
                 "Configuração de Catálogo/Produtos",
+                "WhatsApp Business organizado como brinde",
                 "Suporte Prioritário 24/7"
               ]}
             />
+          </div>
+
+          <div className="mt-12 glass p-8 rounded-[2rem] border-brand-primary/20 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <div>
+              <span className="text-xs font-black uppercase tracking-[0.25em] text-brand-primary mb-3 block">Adicional de Site</span>
+              <h4 className="font-black text-3xl text-white tracking-tighter mb-3">SITE PROFISSIONAL POR R$ 499,99</h4>
+              <p className="text-slate-400 font-medium max-w-3xl">Ao contratar o site, você ganha como brinde o vínculo com WhatsApp Business e a organização do perfil: descrição, foto, catálogo/serviços e mensagem inicial.</p>
+            </div>
+            <div className="shrink-0 text-left lg:text-right">
+              <p className="text-brand-accent font-black uppercase tracking-widest text-xs mb-2">Premium</p>
+              <p className="text-white font-bold max-w-xs">Site grátis no plano Premium com contratação mínima de 3 meses.</p>
+            </div>
           </div>
 
           <div className="mt-20 glass p-10 rounded-[3rem] border-brand-accent/20 flex flex-col md:flex-row items-center justify-between gap-10">
